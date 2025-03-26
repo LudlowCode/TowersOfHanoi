@@ -13,7 +13,7 @@ class Tower
     pole = new int[aMaxSize];
   }
 
-  public Boolean Push(int diskValue) {
+  public bool Push(int diskValue) {
       if (pointer == 0){
         pole[pointer] = diskValue;
         pointer = pointer + 1;
@@ -28,8 +28,6 @@ class Tower
         return false;
       }
   }
-
-
   public int Pop(){
     if (pointer == 0){
       return 999;
@@ -39,7 +37,6 @@ class Tower
       return pole[pointer];
     }
   }
-
   public int Peek(){
     if (pointer == 0){
       return 999;
@@ -48,7 +45,6 @@ class Tower
       return pole[pointer];
     }
   }
-  
   public void PrintTower(){
     Console.WriteLine("----------------------------------");
     Console.WriteLine("Tower contents:\n");
@@ -61,7 +57,9 @@ class Tower
       
 
   }
-  //Main runs automatically when the Program is run
+}
+class Program{
+    //Main runs automatically when the Program is run
   static void Main(string[] args)
   {
     //Calling the constructor of the Tower class to make a new Tower object
@@ -73,6 +71,10 @@ class Tower
     tower1.Pop();
     tower1.PrintTower();
     tower1.Peek();
+    tower1.PrintTower();
+    tower1.Pop();
+    tower1.PrintTower();
+    tower1.Pop();
     tower1.PrintTower();
   }
 }
